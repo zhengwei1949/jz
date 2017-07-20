@@ -1,1 +1,2 @@
-https://github.com/fa-ge/Scrollload/blob/master/README.md
+如果想用手机查看效果，请切换至分支gh-pages
+如果看完整的代码，请切换分支至master
