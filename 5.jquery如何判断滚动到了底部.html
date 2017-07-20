@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height: 2000px;
+        }
+    </style>
+</head>
+<body>
+    <script src="./jquery.js"></script>
+    <script>
+        $(function(){
+            $(window).scroll(function(){
+                // $(window).height() 相当于  document.documentElement.clientHeight
+                // $(window).scrollTop() 相当于 document.body.scrollTop
+                // $(document).height() 相当于document.body.offsetHeight
+                console.log($(window).height() + $(window).scrollTop());
+                console.log($(document).height());
+                var h1 = $(window).height() + $(window).scrollTop();
+                var h2 = $(document).height();
+                if(h1 === h2){
+                    console.log('滚动到底部了');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

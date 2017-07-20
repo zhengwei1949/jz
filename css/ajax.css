@@ -1,0 +1,83 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+.clearfix {
+  content: "";
+  display: block;
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
+  clear: both;
+}
+body {
+  font-family: "sans-serif", "Microsoft Yahei";
+  color: #333;
+}
+body a {
+  color: #333;
+}
+.wrapper {
+  min-width: 300px;
+  max-width: 640px;
+  margin: 0 auto;
+  position: relative;
+}
+header {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  position: fixed;
+}
+header .content {
+  height: 40px;
+  line-height: 40px;
+  min-width: 300px;
+  max-width: 640px;
+  background: -webkit-linear-gradient(top, #800b1a, #a45820 78%);
+}
+main {
+  padding-top: 40px;
+}
+main .dealList a {
+  display: block;
+}
+main .dealList img {
+  vertical-align: top;
+  width: 100%;
+}
+main section {
+  padding: 0 20px;
+}
+main .dealList p {
+  width: 80%;
+  overflow: hidden;
+  white-space: nowrap;
+  float: left;
+  text-overflow: ellipsis;
+}
+main .dealList em {
+  font-style: normal;
+  float: right;
+}
+#toTop {
+  position: fixed;
+  bottom: 24px;
+  right: 15px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+  background: -webkit-linear-gradient(top, #800b1a, #a45820 78%);
+  border-radius: 100%;
+}

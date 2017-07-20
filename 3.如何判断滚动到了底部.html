@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height: 2000px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded',function(){
+            window.addEventListener('scroll',function(){
+                console.log(document.documentElement.clientHeight + document.body.scrollTop);
+                console.log(document.body.offsetHeight);
+                console.log('===========');
+                var h1 = document.documentElement.clientHeight + document.body.scrollTop;
+                var h2 = document.body.offsetHeight;
+                if(h1 === h2)console.log('滚动到底部了');
+            },false);
+        },false);
+    </script>
+</body>
+</html>

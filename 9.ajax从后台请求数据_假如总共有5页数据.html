@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>黑马程序员 - 项目案例</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/ajax.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="content">
+                今日特卖
+            </div>
+        </header>
+        <main>
+            <ul class="dealList" id="dealList">
+
+            </ul>
+        </main>
+        <a id="toTop" href="#">top</a>
+    </div>
+    <script src="./jquery.js"></script>
+    <script src="./template.js"></script>
+    <script id="product" type="text/html">
+        {{each list}}
+        <li>
+            <a href="{{$value.link}}">
+                    <img src="{{$value.img}}" alt="{{$value.title}}">
+                    <section>
+                        <p>{{$value.desc}}</p>
+                        <em>{{$value.discount}}</em>
+                    </section>
+                </a>
+        </li>
+        {{/each}}
+    </script>
+    <script>
+        $(document).ready(function () {
+            var $dealList = $("#dealList");
+            var pageId = 1;//一开始是第一页
+            var maxId = 5;//总页数
+            $.get('./ceshi.json',function(data){
+                var html = template('product', { list: data });
+                $dealList.html(html);
+            });
+            $(window).scroll(function(){
+                var h1 = $(window).height() + $(window).scrollTop();
+                var h2 = $(document).height();
+                if(h1 >= h2 - 60){
+                    // console.log('滚动到底部了');
+                    pageId++;
+                    $.get('./' + pageId +'.json',function(data){
+                        var html = template('product', { list: data });
+                        $dealList.append(html);
+                    })
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
