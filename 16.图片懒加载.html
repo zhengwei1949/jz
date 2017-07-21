@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .foo{
+            width:100%;
+            height: 2000px;
+        }
+        .demo{
+            width: 500px;
+            height: 300px;
+            background:blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="foo"></div>
+    <img src="loading.gif" realsrc="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D268%3Bg%3D0/sign=e14ddeca0a3387449cc5287a6934bec4/d53f8794a4c27d1ec572bb5e1dd5ad6edcc438d7.jpg" id="demo">
+    <script>
+        document.addEventListener('DOMContentLoaded',function(){
+            var oDemo = document.querySelector('#demo');
+            window.addEventListener('scroll',function(){
+                var h1 = document.documentElement.clientHeight + document.body.scrollTop;
+                var h2 = oDemo.offsetTop;
+                // console.log(h1);
+                // console.log(h2);
+                // console.log('==========');
+                if(h1 >= h2 + 40){
+                    console.log(111);
+                    oDemo.setAttribute('src',oDemo.getAttribute('realsrc'))
+                }
+            },false);
+        },false);
+    </script>
+</body>
+</html>

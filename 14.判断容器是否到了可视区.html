@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .foo{
+            width:100%;
+            height: 2000px;
+        }
+        .demo{
+            width: 500px;
+            height: 300px;
+            background:blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="foo"></div>
+    <div class="demo" id="demo"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded',function(){
+            var oDemo = document.querySelector('#demo');
+            window.addEventListener('scroll',function(){
+                var h1 = document.documentElement.clientHeight + document.body.scrollTop;
+                var h2 = oDemo.offsetTop;
+                // console.log(h1);
+                // console.log(h2);
+                // console.log('==========');
+                if(h1 >= h2)console.log('图片可以被看见了');
+            },false);
+        },false);
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .foo {
+            width: 100%;
+            height: 2000px;
+        }
+
+        .demo {
+            width: 500px;
+            height: 300px;
+            background: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="foo"></div>
+    <img src="loading.gif" realsrc="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D268%3Bg%3D0/sign=e14ddeca0a3387449cc5287a6934bec4/d53f8794a4c27d1ec572bb5e1dd5ad6edcc438d7.jpg">
+    <img src="loading.gif" realsrc="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D268%3Bg%3D0/sign=e14ddeca0a3387449cc5287a6934bec4/d53f8794a4c27d1ec572bb5e1dd5ad6edcc438d7.jpg">
+    <img src="loading.gif" realsrc="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D268%3Bg%3D0/sign=e14ddeca0a3387449cc5287a6934bec4/d53f8794a4c27d1ec572bb5e1dd5ad6edcc438d7.jpg">
+    <img src="loading.gif" realsrc="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D268%3Bg%3D0/sign=e14ddeca0a3387449cc5287a6934bec4/d53f8794a4c27d1ec572bb5e1dd5ad6edcc438d7.jpg">
+    <img src="loading.gif" realsrc="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D268%3Bg%3D0/sign=e14ddeca0a3387449cc5287a6934bec4/d53f8794a4c27d1ec572bb5e1dd5ad6edcc438d7.jpg">
+    <img src="loading.gif" realsrc="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D268%3Bg%3D0/sign=e14ddeca0a3387449cc5287a6934bec4/d53f8794a4c27d1ec572bb5e1dd5ad6edcc438d7.jpg">
+    <img src="loading.gif" realsrc="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D268%3Bg%3D0/sign=e14ddeca0a3387449cc5287a6934bec4/d53f8794a4c27d1ec572bb5e1dd5ad6edcc438d7.jpg">
+    <img src="loading.gif" realsrc="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D268%3Bg%3D0/sign=e14ddeca0a3387449cc5287a6934bec4/d53f8794a4c27d1ec572bb5e1dd5ad6edcc438d7.jpg">
+    <img src="loading.gif" realsrc="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D268%3Bg%3D0/sign=e14ddeca0a3387449cc5287a6934bec4/d53f8794a4c27d1ec572bb5e1dd5ad6edcc438d7.jpg">
+    <img src="loading.gif" realsrc="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D268%3Bg%3D0/sign=e14ddeca0a3387449cc5287a6934bec4/d53f8794a4c27d1ec572bb5e1dd5ad6edcc438d7.jpg">
+    <img src="loading.gif" realsrc="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D268%3Bg%3D0/sign=e14ddeca0a3387449cc5287a6934bec4/d53f8794a4c27d1ec572bb5e1dd5ad6edcc438d7.jpg">
+    <img src="loading.gif" realsrc="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D268%3Bg%3D0/sign=e14ddeca0a3387449cc5287a6934bec4/d53f8794a4c27d1ec572bb5e1dd5ad6edcc438d7.jpg">
+    <img src="loading.gif" realsrc="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D268%3Bg%3D0/sign=e14ddeca0a3387449cc5287a6934bec4/d53f8794a4c27d1ec572bb5e1dd5ad6edcc438d7.jpg">
+    <img src="loading.gif" realsrc="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D268%3Bg%3D0/sign=e14ddeca0a3387449cc5287a6934bec4/d53f8794a4c27d1ec572bb5e1dd5ad6edcc438d7.jpg">
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            window.addEventListener('scroll', function () {
+                var h1 = document.documentElement.clientHeight + document.body.scrollTop;
+                var aImgList = document.querySelectorAll('img');
+                for (var i = 0; i < aImgList.length; i++) {
+                    var h2 = aImgList[i].offsetTop;
+                    if (h1 >= h2 + 40) {
+                        aImgList[i].setAttribute('src', aImgList[i].getAttribute('realsrc'))
+                    }
+                }
+            }, false);
+        }, false);
+    </script>
+</body>
+
+</html>
